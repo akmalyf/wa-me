@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "JSON Beautifier",
+  name: "Whatsapp.Me",
   description: "Beautifully designed from developer to developer.",
   mainNav: [
     // {
