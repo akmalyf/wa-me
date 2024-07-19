@@ -5,7 +5,8 @@ import {Button} from "@/components/ui/button";
 import {PhoneInput} from "@/components/phone-input";
 import {HowItWorks} from "@/components/how-it-works";
 import Link from "next/link";
-import TextAnimate from "@/components/ui/text-animate";
+import { motion } from "framer-motion";
+import {AnimateStagger, FADE_UP_ANIMATION_VARIANTS} from "@/components/animate";
 
 export default function Page() {
     const [phoneNumber, setPhoneNumber] = useState("");
@@ -19,9 +20,11 @@ export default function Page() {
     return (
         <div className="container bg-background flex flex-col items-center justify-center h-full w-full">
             <div className="relative isolate px-6 pt-14 lg:px-8">
-                <TextAnimate className="mx-auto max-w-2xl -mt-24">
+                <AnimateStagger className="mx-auto max-w-2xl -mt-24">
                     <div className="sm:mb-8 mb-4 flex justify-center text-center">
-                        <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 dark:text-neutral-400 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                        <motion.div 
+                            variants={FADE_UP_ANIMATION_VARIANTS}
+                            className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 dark:text-neutral-400 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                             Confused about how it works?.{' '}
                             <HowItWorks>
                                 <Link href="#" className="font-semibold text-primary">
@@ -29,16 +32,16 @@ export default function Page() {
                                     Read more <span aria-hidden="true">&rarr;</span>
                                 </Link>
                             </HowItWorks>
-                        </div>
+                        </motion.div >
                     </div>
                     <div className="text-center">
-                        <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
+                        <motion.h1 variants={FADE_UP_ANIMATION_VARIANTS} className="text-4xl font-bold tracking-tight sm:text-6xl">
                             Send WhatsApp Without the Hassle
-                        </h1>
-                        <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-neutral-400">
+                        </motion.h1>
+                        <motion.p variants={FADE_UP_ANIMATION_VARIANTS} className="mt-6 text-lg leading-8 text-gray-600 dark:text-neutral-400">
                             Skip saving contacts. Just enter the number and start chatting. It&apos;s quick, easy, and convenient. Start your conversations in a snap!
-                        </p>
-                        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center max-w-md mx-auto space-x-2 space-y-4 sm:space-y-0">
+                        </motion.p>
+                        <motion.div variants={FADE_UP_ANIMATION_VARIANTS} className="mt-10 flex flex-col sm:flex-row items-center justify-center max-w-md mx-auto space-x-2 space-y-4 sm:space-y-0">
                             <PhoneInput
                                 value={phoneNumber}
                                 onChange={setPhoneNumber}
@@ -57,9 +60,9 @@ export default function Page() {
                                 </svg>
                                 Chat
                             </Button>
-                        </div>
+                        </motion.div>
                     </div>
-                </TextAnimate>
+                </AnimateStagger>
             </div>
         </div>
     )

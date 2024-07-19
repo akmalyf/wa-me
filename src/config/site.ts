@@ -11,7 +11,7 @@ export const siteConfig = {
   ],
   links: {
     twitter: "https://twitter.com/akmaIism",
-    github: "https://github.com/akmalyf/json-beautifier",
+    github: "https://github.com/akmalyf/wa-me",
     docs: "https://akmal.blue",
   },
 };
