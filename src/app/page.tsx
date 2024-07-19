@@ -21,7 +21,7 @@ export default function Page() {
             <div className="relative isolate px-6 pt-14 lg:px-8">
                 <TextAnimate className="mx-auto max-w-2xl -mt-24">
                     <div className="sm:mb-8 mb-4 flex justify-center text-center">
-                        <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 dark:text-neutral-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                        <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 dark:text-neutral-400 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                             Confused about how it works?.{' '}
                             <HowItWorks>
                                 <Link href="#" className="font-semibold text-primary">
@@ -35,7 +35,7 @@ export default function Page() {
                         <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
                             Send WhatsApp Without the Hassle
                         </h1>
-                        <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-neutral-500">
+                        <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-neutral-400">
                             Skip saving contacts. Just enter the number and start chatting. It&apos;s quick, easy, and convenient. Start your conversations in a snap!
                         </p>
                         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center max-w-md mx-auto space-x-2 space-y-4 sm:space-y-0">

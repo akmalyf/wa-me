@@ -7,6 +7,7 @@ import {Button} from "@/components/ui/button";
 import {Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList,} from "@/components/ui/command";
 import {Input, InputProps} from "@/components/ui/input";
 import {Popover, PopoverContent, PopoverTrigger,} from "@/components/ui/popover";
+import {Label} from "@/components/ui/label"
 
 import {cn} from "@/lib/utils";
 import {ScrollArea} from "@/components/ui/scroll-area";
@@ -48,11 +49,15 @@ PhoneInput.displayName = "PhoneInput";
 
 const InputComponent = React.forwardRef<HTMLInputElement, InputProps>(
     ({ className, ...props }, ref) => (
-        <Input
-            className={cn("rounded-e-lg rounded-s-none h-10 border-s-0", className)}
-            {...props}
-            ref={ref}
-        />
+        <>
+            <Label htmlFor="phone-input" className="sr-only">Tab Width</Label>
+            <Input
+                id="phone-input"
+                className={cn("rounded-e-lg rounded-s-none h-10 border-s-0", className)}
+                {...props}
+                ref={ref}
+            />
+        </>
     ),
 );
 InputComponent.displayName = "InputComponent";
